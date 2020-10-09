@@ -6,8 +6,8 @@ var httpProxy = require('http-proxy');
 var apiProxy = httpProxy.createProxyServer();
 var serverOne = 'http://localhost:3001',
   ServerTwo = 'http://localhost:3002',
-  ServerThree = 'http://localhost:3003';
-// var  ServerFour = 'http://localhost:3004';
+  ServerThree = 'http://localhost:3003',
+  ServerFour = 'http://localhost:3004';
 
 app.use(cors())
 
@@ -15,8 +15,13 @@ app.use(cors())
 app.use(express.static(path.join(`${__dirname}/public`)))
 
 
-
+//larry initial render
 app.all("/headerFooter", function(req, res) {
+    console.log('redirecting to Server1');
+    apiProxy.web(req, res, {target: serverOne});
+});
+//larry name click
+app.all("/names/*", function(req, res) {
     console.log('redirecting to Server1');
     apiProxy.web(req, res, {target: serverOne});
 });
@@ -36,11 +41,19 @@ app.all("/item/*", cors(), function(req, res) {
     console.log('redirecting to Server3 item');
     apiProxy.web(req, res, {target: ServerThree});
 });
-app.all("/app4/*", function(req, res) {
+// Jin initial render
+app.all("/itemreview", function(req, res) {
     
     console.log('redirecting to Server4');
     apiProxy.web(req, res, {target: ServerFour});
 });
+//jin route to review server
+app.all("/targets/*", function(req, res) {
+    
+    console.log('redirecting to Server4');
+    apiProxy.web(req, res, {target: ServerFour});
+});
+
 
 app.listen(3000);
 

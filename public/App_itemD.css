@@ -49,6 +49,13 @@ hr{
    
     
 }
+#item{
+    vertical-align: auto;
+    padding-top: 6em;
+   
+   
+    
+}
 
 .item-details{
     width: 1400px;

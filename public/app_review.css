@@ -1,0 +1,72 @@
+.app{
+  /* display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%; */
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 20px;
+}
+
+.display {
+  text-align: center;
+}
+.title {
+    /* display:flex;
+    overflow: auto;
+    align-items: center;
+    justify-content: center; */
+     display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+  grid-gap: 50px;
+  
+
+} 
+
+ .photo {
+ float: right;
+width: 33.33%;
+
+} 
+
+.rate {
+position: middle;
+right: 200px;
+}
+
+/* .photo {
+position: relative;
+left: 900px;
+} */
+ 
+.comment {
+position: relative;
+top: 170px;
+}
+
+.type {
+position: relative;
+top: 200px;
+left: 1500px;
+}
+
+.donut {
+  align-items: center;
+}
+
+ 
+ .container {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+    border: 2px solid #ccc;
+    background-color: #eee;
+    border-radius: 1px;
+    width: 30%;
+    height: 100%;
+        padding: 80px;
+        margin: 5px 0
+      }
+
